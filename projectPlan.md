@@ -11,7 +11,6 @@ The insights gained from this analysis can benefit city planners, policymakers, 
 - Are there any notable geographic patterns in bike usage across different neighborhoods or stations in Chicago?
 - How do weather conditions, such as temperature and precipitation, impact the daily volume of Divvy bike rides?
 
-By addressing these questions, we seek to understand how various factors influence bike-sharing trends and user behavior in an urban setting.
 
 ## Team
 
