@@ -6,6 +6,7 @@
 
 ## Update on Tasks
 
+
 As of now, we have completed several key milestones outlined in our project plan. The GitHub repository follows a structured folder layout under the organization, including a `raw_data/` directory that contains the acquired datasets. We have also completed the `ProjectPlan.md` file, which documents our research questions and outlines the objectives of the project.
 
 Regarding data acquisition, we identified and obtained the Divvy daily trip data for all months in 2024. These were successfully combined into a single dataset (`combined_2024_divvy_data.csv`) using a merging script & partial formatting (`merge_divy.py`) located in the root directory of the repository. Using Pandas, we read and combined all monthly files into one DataFrame, dropping unnecessary columns, which was a missing feature from the original Divvy dataset. Finally, we cleaned the datetime columns by splitting them into separate date and time columns before saving the processed file.
