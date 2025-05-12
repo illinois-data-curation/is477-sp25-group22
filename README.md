@@ -1,6 +1,6 @@
 # Analyzing Weather-Driven Patterns in Chicago’s Divvy Bike Share Usage (2024)
 
-**Link to archival record:** 
+**Link to archival record:** [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15385074.svg)](https://doi.org/10.5281/zenodo.15385074)
 
 **Contributors:**  
 Gabriela Espinosa Arzeta (0009-0003-4240-015X), Otae Kwon (0009-0004-0183-6341)
