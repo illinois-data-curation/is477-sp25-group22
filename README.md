@@ -248,13 +248,24 @@ source venv/bin/activate
 ### 3. Install Dependencies (Terminal)
 
 Use the terminal to install all required packages & review `environment.md` file:
+
+**On macOS / Linux (Terminal):**
 ```bash
 python3 -m pip install -r requirements.txt
 ```
+**On Windows (PowerShell or Command Prompt):**
+```bash
+python -m pip install -r requirements.txt
+```
 
 ### Gather Datasets (Terminal)
+**On macOS / Linux (Terminal):**
 ```bash
 python3 download.py
+```
+**On Windows (PowerShell or Command Prompt):**
+```bash
+python download.py
 ```
 
 If you run into issues during the data merging step (e.g., missing or corrupted files), you can download a preprocessed version of the combined dataset:
