@@ -16,7 +16,7 @@ Our research began by defining key questions:
 - When are Divvy bikes most frequently used regarding time, day of the week, and season?
 
 ### Scripts
-### `assessment.py`
+#### `assessment.py`
 The `assessment.py` script is designed to perform comprehensive data profiling, cleaning, and integrity checks on two datasets: `combined_2024_divvy_data.csv`, which contains Divvy trip records, and `weather_2024.json`, which holds historical weather data for Chicago. The script begins by loading both datasets and then conducts data profiling that includes:
 - Generating summary statistics
 - Identifying missing values
@@ -28,7 +28,7 @@ For cleaning, it removes duplicate entries from the Divvy dataset and saves the 
 
 Additionally, the script includes an integrity verification step by computing SHA-256 hash values for both the cleaned Divvy data and the weather JSON file. These hashes are stored in `hashes/divvy.sha` and `hashes/weather.sha`, allowing users to detect any future alterations to the datasets by comparing hash values.
 
-### `merge_divy.py`
+#### `merge_divy.py`
 The `merge_divy.py` script is responsible for aggregating and preprocessing Divvy bike trip data for the year 2024. It starts by creating a `data/` directory if it does not already exist and defines a list of file paths pointing to monthly Divvy trip datasets stored in the `raw_data/` folder. It reads all twelve CSV files and combines them into a single DataFrame.
 
 During preprocessing, the script:
@@ -39,6 +39,11 @@ During preprocessing, the script:
 
 The cleaned and structured dataset is finally saved as `data/combined_2024_divvy_data.csv`. This script serves as the foundational preprocessing step for the overall project, preparing the data for subsequent analysis and visualization.
 
+#### `visualization.py`
+The `visualization.py` script is responsible for analyzing and visualizing Divvy bike usage patterns in terms of time and weather. It first extracts temporal features such as hour, weekday, and month from the cleaned Divvy dataset, and then generates bar plots showing usage patterns by hours, days of the week, and months. It blends the Divvy data with weather data to produce scatter plots showing how temperature, precipitation, and snowfall influence ride frequency. All generated visualizations are saved in the `results/` directory.
+
+#### `weather_json.py`
+The `weather_json.py` program sanitizes raw NOAA weather data stored as a CSV file (`chicago_weather.csv`). It removes columns that are irrelevant and stores the cleaned dataset in a JSON format. The resulting `weather_2024.json` file is saved in the `data/` directory to be used in later phases of the analysis pipeline.
 ## Data Profile
 
 This project draws on two primary datasets to analyze the relationship between bike share activity and environmental conditions in Chicago: the **2024 Divvy Bike Share Trip Data** and **NOAA GHCND Weather Data from Chicago O'Hare**. These datasets are complementary, enabling both time-series and cross-variable analysis at a daily granularity. This section outlines the structure, sourcing, licensing, and transformation of each dataset used in the project.
@@ -203,9 +208,22 @@ Finally, future work could explore policy implications based on the findings. Fo
 
 ## Reproducing
 
-### 1. Clone the Repository (Terminal)
+### Windows Python Alias 
+Define an alias in PowerShell:
 ```bash
-git clone https://github.com/illinois-data-curation/is477-sp25-group22
+Set-Alias python3 python
+```
+
+### 1. Clone the Repository (Terminal)
+**MacOs or Linux**
+```bash
+git clone https://github.com/illinois-data-curation/is477-sp25-group22 ~/Desktop/is477-sp25-group22
+cd is477-sp25-group22
+```
+
+**On Windows (PowerShell or Command Prompt):**
+```bash
+git clone https://github.com/illinois-data-curation/is477-sp25-group22 "C:\Users\YourName\Desktop\is477-sp25-group22"
 cd is477-sp25-group22
 ```
 
@@ -224,11 +242,14 @@ exec zsh
 
 **On Windows (PowerShell or Command Prompt):**
 ```bash
+python -m venv venv
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser #(Run Once)
 venv\Scripts\activate
 ```
 
 **On macOS / Linux (Terminal):**
 ```bash
+python -m venv venv
 source venv/bin/activate
 ```
 
@@ -252,6 +273,9 @@ If you run into issues during the data merging step (e.g., missing or corrupted 
 Download the file(s) from the link above and place the contents into your local `is477-sp25-group22/` project folder.
 
 ### 4. Run the Workflow (Terminal)
+
+**Special Case for Windows**  
+To ensure compatibility, switch all shell commands from `python3` to `python` for proper execution on Windows systems.
 
 Execute the Snakemake pipeline:
 ```bash
