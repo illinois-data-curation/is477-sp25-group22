@@ -1,9 +1,9 @@
 # Analyzing Weather-Driven Patterns in Chicago’s Divvy Bike Share Usage (2024)
 
-**Link to archival record:**
+**Link to archival record:** 
 
 **Contributors:**  
-Gabriela Espinosa Arzeta, Otae Kwon
+Gabriela Espinosa Arzeta (0009-0003-4240-015X), Otae Kwon (0009-0004-0183-6341)
 
 ## Summary
 This project analyzes public bike share usage patterns in Chicago using data from the city's Divvy bike share system. Through an analysis of environmental trends, the aim is to identify meaningful information regarding the impacts that weather patterns and time-based variables have on ridership. With the integration of Divvy trip histories and past weather data, this study is tasked with answering crucial questions of when, why, and how Chicagoans are utilizing Divvy bicycles.
@@ -208,17 +208,16 @@ Finally, future work could explore policy implications based on the findings. Fo
 
 ## Reproducing
 
-### Windows Python Alias 
-Define an alias in PowerShell:
-```bash
-Set-Alias python3 python
-```
-
 ### 1. Clone the Repository (Terminal)
 ```bash
 git clone https://github.com/illinois-data-curation/is477-sp25-group22
 cd is477-sp25-group22
 ```
+You can open the project in Visual Studio Code with this command:
+```bash
+code .
+```
+
 
 ### 2. Activate Virtual Environment (Terminal)
 
