@@ -215,21 +215,14 @@ Set-Alias python3 python
 ```
 
 ### 1. Clone the Repository (Terminal)
-**MacOs or Linux**
 ```bash
-git clone https://github.com/illinois-data-curation/is477-sp25-group22 ~/Desktop/is477-sp25-group22
-cd is477-sp25-group22
-```
-
-**On Windows (PowerShell or Command Prompt):**
-```bash
-git clone https://github.com/illinois-data-curation/is477-sp25-group22 "C:\Users\YourName\Desktop\is477-sp25-group22"
+git clone https://github.com/illinois-data-curation/is477-sp25-group22
 cd is477-sp25-group22
 ```
 
 ### 2. Activate Virtual Environment (Terminal)
 
-**(No existing base or Venv)**  
+**(If existing base or Venv)**  
 Remove Conda Base Environment:
 ```bash
 conda deactivate
